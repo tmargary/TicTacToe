@@ -1,9 +1,13 @@
 #include <iostream>
-
-using namespace std;
+#include "Board.h"
+#include "Game.h"
 
 int main()
 {
-    cout << "Success\n";
-    return 0;
+	Board* board = new Board();
+	Game game(board);
+	game.run();
+
+	delete board;
+	return 0;
 }
